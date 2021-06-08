@@ -1,0 +1,765 @@
+{%load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-title" content="Cera Youzify">
+	<meta name="application-name" content="Cera Youzify">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="msapplication-TileColor" content="#ffffff">
+
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<!-- Icons -->
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v16.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>{%block title%}AITU{%endblock%}</title>
+	<link rel="canonical" href="https://youzify.cera-theme.com/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Home &bull; Cera Youzify" />
+	<meta property="og:url" content="https://youzify.cera-theme.com/" />
+	<meta property="og:site_name" content="Cera Youzify" />
+	<meta property="article:modified_time" content="2021-05-05T18:35:19+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://youzify.cera-theme.com/#website","url":"https://youzify.cera-theme.com/","name":"Cera Youzify","description":"Intranet &amp; Extranet BuddyPress theme","potentialAction":[{"@type":"SearchAction","target":"https://youzify.cera-theme.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://youzify.cera-theme.com/#webpage","url":"https://youzify.cera-theme.com/","name":"Home &bull; Cera Youzify","isPartOf":{"@id":"https://youzify.cera-theme.com/#website"},"datePublished":"2019-10-11T14:45:32+00:00","dateModified":"2021-05-05T18:35:19+00:00","breadcrumb":{"@id":"https://youzify.cera-theme.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://youzify.cera-theme.com/"]}]},{"@type":"BreadcrumbList","@id":"https://youzify.cera-theme.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://youzify.cera-theme.com/#webpage"}}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com' />
+<link rel='dns-prefetch' href='//youzer.cera-theme.com' />
+<link rel='dns-prefetch' href='//fonts.gstatic.com' />
+<link rel='dns-prefetch' href='//static.addtoany.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com' rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Cera Youzify &raquo; Feed" href="https://youzify.cera-theme.com/feed/" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-members/css/blocks/member.min.css?ver=7.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-members-block-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-members/css/blocks/members.min.css?ver=7.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-groups/css/blocks/group.min.css?ver=7.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-groups-block-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-groups/css/blocks/groups.min.css?ver=7.3.0' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='menu-image-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/menu-image/includes/css/menu-image.css?ver=1620821249' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='dashicons-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-includes/css/dashicons.min.css?ver=1620821249' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='pmpro_frontend-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/paid-memberships-pro/css/frontend.css?ver=1620821249' type='text/css' media='screen' />
+<link rel='stylesheet' id='pmpro_print-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/paid-memberships-pro/css/print.css?ver=2.5.9' type='text/css' media='print' />
+<link rel='stylesheet' id='youzify-opensans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C600&#038;ver=1.0.5&#038;display=swap' type='text/css' media='all' />
+<link rel='stylesheet' id='youzify-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/public/assets/css/youzify.min.css?ver=1.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='youzify-headers-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/public/assets/css/youzify-headers.min.css?ver=1.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='youzify-scheme-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/public/assets/css/schemes/youzify-blue-scheme.min.css?ver=1.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='youzify-social-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/public/assets/css/youzify-social.min.css?ver=1.0.5' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='youzify-icons-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/youzify/includes/admin/assets/css/all.min.css?ver=1620821249' type='text/css' media='all' />
+<link rel='stylesheet' id='youzify-customStyle-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/admin/assets/css/custom-script.css?ver=5.7.1' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='swiper-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/bp-member-swipe/assets/css/vendor/swiper-bundle.min.css?ver=1620821249' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='bp-member-swipe-directory-swiper-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/bp-member-swipe/assets/css/directory-swiper.css?ver=1620821249' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock/assets/css/style.css?ver=1620821249' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-animate-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-animate/assets/css/style.css?ver=1620821249' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-bbpress-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-bbpress/assets/css/style.css?ver=1620821249' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-buddypress-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-buddypress/assets/css/style.css?ver=1620821250' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='priority-nav-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-buddypress/assets/css/vendor/priority-nav-core.css?ver=1620821250' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-echo-knowledge-base-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-echo-knowledge-base/assets/css/style.css?ver=1620821250' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-elementor-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-elementor/assets/css/style.css?ver=1620821250' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-jetpack-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-jetpack/assets/css/style.css?ver=1620821250' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-learndash-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-learndash/assets/css/style.css?ver=1620821250' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-login-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-login/assets/css/style.css?ver=1620821250' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-paid-memberships-pro-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-paid-memberships-pro/assets/css/style.css?ver=1620821250' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='wordpress-popular-posts-css-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=1620821250' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='cera-style-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/themes/cera/style.css?ver=1620821251' type='text/css' media='all' />
+<link rel='stylesheet' id='youzify-bbpress-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/public/assets/css/youzify-bbpress.min.css?ver=1.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='youzify-membership-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/public/assets/css/youzify-membership.min.css?ver=1.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='youzify-membership-customStyle-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/admin/assets/css/custom-script.css?ver=5.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-search-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress-global-search/assets/css/jquery-ui.min.css?ver=1.11.2' type='text/css' media='all' />
+<link rel='stylesheet' id='buddypress-global-search-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress-global-search/assets/css/buddypress-global-search.min.css?ver=1.2.1' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-buddypress-youzify-style-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-buddypress/assets/css/youzify.css?ver=1620821251' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grimlock-author-avatars-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-author-avatars/assets/css/style.css?ver=1620821251' type='text/css' media='all' />
+<link rel='stylesheet' id='kirki-styles-css'  href='https://youzify.cera-theme.com?action=kirki-styles&#038;ver=3.1.3' type='text/css' media='all' />
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;cursor:pointer;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background:url(https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat;cursor:pointer}.wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+</style>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js' defer></script>
+<script type='text/javascript' id='bp-confirm-js-extra'>
+/* <![CDATA[ */
+var BP_Confirm = {"are_you_sure":"Are you sure?"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-core/js/confirm.min.js?ver=7.3.0' id='bp-confirm-js' defer></script>
+<script data-minify="1" type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/buddypress-notifications-widget/notification.js?ver=1620821251' id='bp-notification-widget-clear-js-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-core/js/widget-members.min.js?ver=7.3.0' id='bp-widget-members-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-core/js/jquery-query.min.js?ver=7.3.0' id='bp-jquery-query-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.min.js?ver=7.3.0' id='bp-jquery-cookie-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.min.js?ver=7.3.0' id='bp-jquery-scroll-to-js' defer></script>
+<script type='text/javascript' id='bp-legacy-js-js-extra'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Like","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Unlike","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/public/assets/js/buddypress.min.js?ver=7.3.0' id='bp-legacy-js-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-friends/js/widget-friends.min.js?ver=7.3.0' id='bp_core_widget_friends-js-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress/bp-groups/js/widget-groups.min.js?ver=7.3.0' id='groups_widget_groups_list-js-js' defer></script>
+<script type='application/json' id='wpp-json'>
+{"sampling_active":0,"sampling_rate":100,"ajax_url":"https:\/\/youzify.cera-theme.com\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","ID":0,"token":"85f3ce0495","lang":0,"debug":0}
+</script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=5.3.2' id='wpp-js-js' defer></script>
+<link rel="https://api.w.org/" href="https://youzify.cera-theme.com/wp-json/" /><link rel="alternate" type="application/json" href="https://youzify.cera-theme.com/wp-json/wp/v2/pages/25" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://youzify.cera-theme.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/wlwmanifest.xml" />
+<link rel='shortlink' href='https://youzify.cera-theme.com/' />
+
+	<script type="text/javascript">var ajaxurl = 'https://youzify.cera-theme.com/wp-admin/admin-ajax.php';</script>
+
+
+<link rel="preload" as="font" href="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/themes/cera/assets/fonts/cera/cera.ttf" crossorigin>        <style>
+            @-webkit-keyframes bgslide {
+                from {
+                    background-position-x: 0;
+                }
+                to {
+                    background-position-x: -200%;
+                }
+            }
+
+            @keyframes bgslide {
+                    from {
+                        background-position-x: 0;
+                    }
+                    to {
+                        background-position-x: -200%;
+                    }
+            }
+
+            .wpp-widget-placeholder {
+                margin: 0 auto;
+                width: 60px;
+                height: 3px;
+                background: #dd3737;
+                background: -webkit-gradient(linear, left top, right top, from(#dd3737), color-stop(10%, #571313), to(#dd3737));
+                background: linear-gradient(90deg, #dd3737 0%, #571313 10%, #dd3737 100%);
+                background-size: 200% auto;
+                border-radius: 3px;
+                -webkit-animation: bgslide 1s infinite linear;
+                animation: bgslide 1s infinite linear;
+            }
+        </style>
+        <style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f6f6f6; }
+</style>
+	<link rel="icon" href="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/12/cropped-favicon-youzer-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/12/cropped-favicon-youzer-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/12/cropped-favicon-youzer-300x300.png" />
+<meta name="msapplication-TileImage" content="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/12/cropped-favicon-youzer-300x300.png" />
+<style>#blogs-personal-li { display: none !important; } .doc-permissions-toggle, table .attachment-clip-cell {display: none !important;} #doc-attachments { cursor: not-allowed; opacity: 0.5; } #doc-attachments > * { pointer-events: none; } #settings-form {
+	cursor: not-allowed !important;
+}
+#settings-form input {
+	pointer-events: none !important;
+	opacity: .5 !important;
+}</style><style>#pmpro_levels_table:before {
+    content: 'These are dummy pricing plans that aim to show what is possible to do. This has nothing to do with the pricing policy of the Cera theme.';
+    display: block;
+    background: rgba(0, 0, 0, 0.08);
+    width: 100%;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: .9em;
+    font-style: italic;
+    opacity: .8;
+}</style><style>#alphabetical-groups, .yz-navbar-item a[href*="/blogs"] { display: none !important; }</style>		<style type="text/css" id="wp-custom-css">
+			/* Fix youzer widgets */
+.yz-sidebar-column .widget_bp_core_members_widget #members-list .vcard div.item-avatar, .yz-sidebar-column .widget_bp_groups_widget #groups-list li div.item-avatar {
+	 width: auto !important;
+}
+
+ .yz-sidebar-column .widget_bp_core_members_widget #members-list .vcard div.item-avatar img, .yz-sidebar-column .widget_bp_groups_widget #groups-list li div.item-avatar img {
+	 width: 55px !important;
+	 height: 55px !important;
+}
+
+.sidebar .widget #groups-list-options a, .sidebar .widget #members-list-options a, .sidebar .widget #friends-list-options a, .yz-sidebar-column .widget #groups-list-options a, .yz-sidebar-column .widget #members-list-options a, .yz-sidebar-column .widget #friends-list-options a {
+    font-size: .8rem;
+    padding-bottom: 10px;
+    margin-top: 0;
+	color: inherit !important;
+}
+
+
+		</style>
+		<style id="kirki-css-vars">:root{--grimlock-site-identity-blogname-font-family:Heebo,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-site-identity-blogname-font-weight:400;--grimlock-site-identity-blogname-font-size:1.25rem;--grimlock-site-identity-blogname-line-height:1.5;--grimlock-site-identity-blogname-letter-spacing:0px;--grimlock-site-identity-blogname-text-transform:none;--grimlock-text-font-family:Open Sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-text-font-weight:400;--grimlock-text-font-size:1rem;--grimlock-text-line-height:1.5;--grimlock-text-letter-spacing:0px;--grimlock-text-text-transform:none;--grimlock-heading-font-family:Roboto,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-heading-font-weight:500;--grimlock-heading-letter-spacing:0px;--grimlock-heading-text-transform:none;--grimlock-heading1-font-size:2rem;--grimlock-heading1-line-height:1.2;--grimlock-heading2-font-size:1.8rem;--grimlock-heading2-line-height:1.2;--grimlock-heading3-font-size:1.4rem;--grimlock-heading3-line-height:1.2;--grimlock-heading4-font-size:1.25rem;--grimlock-heading4-line-height:1.2;--grimlock-heading5-font-size:1.05rem;--grimlock-heading5-line-height:1.2;--grimlock-heading6-font-size:0.95rem;--grimlock-heading6-line-height:1.2;--grimlock-display-heading-font-family:Roboto,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-display-heading-font-weight:500;--grimlock-display-heading-letter-spacing:0px;--grimlock-display-heading-text-transform:none;--grimlock-display-heading1-font-size:2.85rem;--grimlock-display-heading1-line-height:1.2;--grimlock-display-heading2-font-size:2.15rem;--grimlock-display-heading2-line-height:1.2;--grimlock-display-heading3-font-size:1.85rem;--grimlock-display-heading3-line-height:1.2;--grimlock-display-heading4-font-size:1.4rem;--grimlock-display-heading4-line-height:1.2;--grimlock-subheading-font-family:Open Sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-subheading-font-weight:400;--grimlock-subheading-font-size:0.9rem;--grimlock-subheading-line-height:1.5;--grimlock-subheading-letter-spacing:2px;--grimlock-subheading-text-transform:uppercase;--grimlock-blockquote-font-family:Roboto Condensed,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-blockquote-font-weight:400;--grimlock-blockquote-font-size:1.25rem;--grimlock-blockquote-line-height:1.5;--grimlock-blockquote-letter-spacing:0px;--grimlock-blockquote-text-transform:none;--grimlock-blockquote-text-align:left;--grimlock-navigation-font-family:Roboto,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-navigation-font-weight:500;--grimlock-navigation-font-size:.9rem;--grimlock-navigation-line-height:1.25;--grimlock-navigation-letter-spacing:0px;--grimlock-navigation-text-transform:none;--grimlock-button-font-family:Roboto,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-button-font-weight:500;--grimlock-button-font-size:16px;--grimlock-button-line-height:1.25rem;--grimlock-button-letter-spacing:0px;--grimlock-button-text-transform:none;--grimlock-hero-title-font-family:Roboto,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-hero-title-font-weight:500;--grimlock-hero-title-font-size:3rem;--grimlock-hero-title-line-height:1.2;--grimlock-hero-title-letter-spacing:0px;--grimlock-hero-title-text-transform:none;--grimlock-hero-subtitle-font-family:Open Sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-hero-subtitle-font-weight:400;--grimlock-hero-subtitle-font-size:1.2rem;--grimlock-hero-subtitle-line-height:1.5;--grimlock-hero-subtitle-letter-spacing:0px;--grimlock-hero-subtitle-text-transform:none;--grimlock-hero-text-font-family:Heebo,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--grimlock-hero-text-font-weight:400;--grimlock-hero-text-font-size:1.2rem;--grimlock-hero-text-line-height:1.5;--grimlock-hero-text-letter-spacing:0px;--grimlock-hero-text-text-transform:none;}</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}
+</style></noscript></head>
+
+<body data-rsssl=1 class="home-page bp-legacy home page-template page-template-template-full-width-no-header page-template-template-full-width-no-header-php page page-id-25 custom-background wp-custom-logo wp-embed-responsive pmpro-body-has-access youzify-blue-scheme not-logged-in grimlock grimlock--classic grimlock--navigation-classic-center grimlock--navigation-inside-top grimlock--navigation-fixed grimlock--back-to-top-right grimlock--loader-fadein-displayed grimlock--page grimlock-buddypress--friend-icons-heart grimlock--navigation-login-displayed grimlock-wordpress-seo--breadcrumb_custom_header_displayed group-blog mobile bps-form-home-none elementor-default elementor-kit-2104 no-js">
+
+
+<a class="skip-link screen-reader-text sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+<div id="site-wrapper">
+
+	<div id="site">
+
+					<header id="header" class="grimlock-header site-header region grimlock-region grimlock-region--mt-0 grimlock-region--mb-0 grimlock-region--pt-0 grimlock-region--pb-0" style="border-top-color:transparent;border-top-style:solid;border-top-width:0;border-bottom-color:transparent;border-bottom-style:solid;border-bottom-width:0;"  >
+			<div class="grimlock-region__inner region__inner" >
+				<div class="grimlock-region__container region__container">
+								<nav id="navigation" class="grimlock-navbar-expand-lg navbar-expand-lg grimlock-navigation site-navigation main-navigation grimlock-navbar navbar grimlock-navbar--classic-center navbar--classic-center grimlock-navbar--container-fluid navbar--container-fluid" style="border-top-color:#eceeef;border-top-style:solid;border-top-width:0;border-bottom-color:#E9EFF3;border-bottom-style:solid;border-bottom-width:0;color:#ffffff;" >
+			<div class="grimlock-navbar__container navbar__container">
+				<div class="grimlock-navbar__header navbar__header">
+					        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation-collapse" aria-controls="navigation-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+        </button>
+		        <div class="navbar-brand">
+                        <div class="site-branding grimlock-site_identity">
+                <h1 class="screen-reader-text"><a href="https://youzify.cera-theme.com/" rel="home">Cera Youzify</a></h1>
+				                    <div class="grimlock-site-logo grimlock-navbar-brand__logo site-logo navbar-brand__logo">
+                        <a href="https://youzify.cera-theme.com/" class="custom-logo-link" rel="home" aria-current="page"><noscript><img width="142" height="44" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/10/logo.png" class="custom-logo" alt="Cera Youzify" /></noscript></a>                    </div><!-- navbar-brand__logo -->
+					            </div><!-- .site-branding -->
+		        </div><!-- .navbar-brand -->
+						</div><!-- .navbar__header -->
+				<div class="collapse grimlock-navbar-collapse navbar-collapse" id="navigation-collapse">
+					<div class="grimlock-navbar-collapse-content navbar-collapse-content">
+						<ul id="menu-primary" class="nav navbar-nav grimlock-navbar-nav--main-menu navbar-nav--main-menu"><li id="menu-item-2013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-25 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-2013"><a href="#" aria-current="page">Home</a>
+<ul class="sub-menu">
+	<li id="menu-item-1556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-25 current_page_item menu-item-1556"><a href="{%url 'home' %}" aria-current="page">Homepage</a></li>
+	<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="#">Dashboard</a></li>
+</ul>
+</li>
+<li id="menu-item-2014" class="menu-item--title menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2014"><a href="#">Community</a>
+<ul class="sub-menu">
+	<li id="menu-item-1788" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1788"><a href="{%url 'feed' %}"><i class="cera-icon cera-heart text-primary"></i> Social wall</a></li>
+	<li id="menu-item-2015" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2015"><a href="#"><i class="cera-icon cera-globe text-primary"></i> Members</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1790" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1790"><a href="#">Members directory</a></li>
+		<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="#">Swipe Members</a></li>
+		<li id="menu-item-1560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1560"><a href="#">Search members</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1791" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1791"><a href="#"><i class="cera-icon cera-users text-primary"></i> Groups</a></li>
+	<li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="#"><i class="cera-icon cera-message-square text-primary"></i> Forums</a></li>
+</ul>
+</li>
+<li id="menu-item-74" class="menu-item--title menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-74"><a href="#">Membership</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="#"><i class="cera-icon cera-dollar-sign text-primary"></i> Pricing plans</a></li>
+	<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="#"><i class="cera-icon cera-x-octagon text-primary"></i> Restricted content</a></li>
+</ul>
+</li>
+<li id="menu-item-41" class="menu-item--title menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-41"><a>More</a>
+<ul class="sub-menu">
+	<li id="menu-item-1725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1725"><a href="#">Dashboard page</a></li>
+	<li id="menu-item-1621" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1621"><a href="#">Wiki</a></li>
+	<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="#">News</a></li>
+	<li id="menu-item-1597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1597"><a href="#">Password Protected Page</a></li>
+	<li id="menu-item-1656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1656"><a href="#">Gutenberg Blocks</a></li>
+	<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="/404-page">404 page</a></li>
+</ul>
+</li>
+</ul>
+						<!-- register shit -->
+		<ul class="grimlock-login-navbar_nav_menu nav navbar-nav grimlock-navbar-nav--login navbar-nav--login">
+
+						{%if user.is_authenticated%}
+			<li class="menu-item menu-item--login">
+									<button type="button" class="btn btn-outline-primary"><a href="{%url 'logout' %}">Logout</a></button>
+							</li>
+			<li class="menu-item menu-item--login">
+									<button type="button" class="btn btn-outline-primary"><a href="{%url 'profile' user.username%}">Profile</a></button>
+							</li>
+		{%else%}
+			<li class="menu-item menu-item--login">
+									<button type="button" class="btn btn-outline-primary"><a href="{%url 'login' %}">Login</a></button>
+							</li>
+			<li class="menu-item menu-item--login">
+									<button type="button" class="btn btn-outline-primary"><a href="{%url 'register' %}">Register</a></button>
+							</li>
+					</ul>
+						{%endif%}
+
+
+			<ul class="nav navbar-nav navbar-nav--buddypress logged-out">
+				<li class="menu-item menu-item-has-children ml-0 menu-item--profile has-groups_invites has-notifications">
+
+						<a href="https://youzify.cera-theme.com/register/" class="menu-item--profile__link d-none d-lg-block ">
+							<span class="avatar-round-ratio"><span class="d-block pos-r h-100"><img class="img-fluid" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt=" avatar" data-lazy-src="//www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&#038;s=50" /><noscript><img class="img-fluid" src="//www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&#038;s=50" alt=" avatar" /></noscript></span></span>
+						</a>
+
+						<ul id="menu-user-logged-out" class="sub-menu"><li id="menu-item-108" class="bp-menu bp-login-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-108"><a href="https://youzify.cera-theme.com/wp-login.php?redirect_to=https%3A%2F%2Fyouzify.cera-theme.com%2F"><i class="cera-icon cera-log-in"></i> Log In</a></li>
+<li id="menu-item-109" class="bp-menu bp-register-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-109"><a href="https://intranet.cera-theme.com/register/"><i class="cera-icon cera-corner-up-right"></i> Register</a></li>
+</ul>				</li>
+			</ul>
+							</div>
+				</div><!-- .collapse -->
+			</div><!-- .navbar__container -->
+			</nav><!-- .navbar -->
+						</div><!-- .region__container -->
+			</div><!-- .region__inner -->
+			</header><!-- .grimlock-region -->
+
+
+		<div id="content" class="site-content region region--container-fluid region--container-classic" tabindex="-1">
+			<div class="region__container">
+				<div class="region__row">
+
+	<div id="primary" class="content-area region__col">
+		<main id="main" class="site-main">
+
+
+				<article id="post-25" class="post-25 page type-page status-publish hentry pmpro-has-access">
+						<div class="grimlock--page-content entry-content clearfix">
+					<div data-bg="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/12/brooke-cagle-NoRsyXmHGpI-unsplash-1850x550.jpg"  class="wp-block-grimlock-section grimlock-section--btn-primary grimlock-section--intranet-extranet-the-simple-way alignfull region grimlock-region grimlock-region--mt-0 grimlock-region--mb-0 grimlock-region--pt-12 grimlock-region--pb-12 grimlock-region--6-6-cols-left-reverse region--6-6-cols-left-reverse grimlock-region--container-classic region--container-classic grimlock-section section section_content_reveal rocket-lazyload" style="background-repeat:no-repeat;background-position:center;background-size:cover;-webkit-background-size:cover;background-attachment:scroll;border-top-color:#eceeef;border-top-style:solid;border-top-width:0;border-bottom-color:#eceeef;border-bottom-style:solid;border-bottom-width:0;z-index:0;color:#ffffff;"  >
+			<div class="region__inner" style="padding-top:12%;padding-bottom:12%;background:linear-gradient(90deg,rgba(57,56,65,0.7) 0%,rgba(72,70,91,0.1) 100%);background-color:rgba(72, 70, 91, 0.15);">
+				<div class="region__container">
+					<div class="region__row">
+						<div class="region__col region__col--1" >
+							<div class="grimlock-reveal-element grimlock-reveal-element--thumbnail" >
+															</div>
+						</div><!-- .region__col -->
+						<div class="region__col region__col--2" >
+							<div class="grimlock-reveal-element grimlock-reveal-element--content" data-grimlock-animate-scroll-reveal="{&quot;origin&quot;:&quot;right&quot;,&quot;distance&quot;:&quot;80px&quot;,&quot;duration&quot;:750,&quot;delay&quot;:0,&quot;rotate&quot;:{&quot;x&quot;:0,&quot;y&quot;:0,&quot;z&quot;:0},&quot;opacity&quot;:0,&quot;scale&quot;:1,&quot;easing&quot;:&quot;cubic-bezier(0.6, 0.2, 0.1, 1)&quot;,&quot;viewFactor&quot;:0.5,&quot;mobile&quot;:false,&quot;reset&quot;:false}">
+									        <div class="grimlock-section__header section__header">
+
+            <h2 class="grimlock-section__title section__title grimlock-display-1 display-1" style="color:#ffffff;">
+				Social Network <br />for AITU students            </h2>
+				        </div><!-- .section__header -->
+				        <div class="grimlock-section__content section__content">
+				            <div class="grimlock-section__text section__text">
+				Take full advantage of communication on our platform.<br /> Share news, get more likes and followers by few clicks.<br />            </div>
+				        </div><!-- .section__content -->
+										</div>
+						</div><!-- .region__col -->
+					</div><!-- .region__row -->
+				</div><!-- .region__container -->
+			</div><!-- .region__inner -->
+			</div><!-- .grimlock-section -->
+
+
+			<div  class=" wp-block-grimlock-author-avatars-author-avatars-section grimlock-author-avatars-author-avatars-section--btn-link grimlock-author-avatars-author-avatars-section--our-active-members alignfull region grimlock-region grimlock-region--mt-0 grimlock-region--mb-0 grimlock-region--pt-6 grimlock-region--pb-6 grimlock-region--12-cols-left region--12-cols-left grimlock-region--container-classic region--container-classic grimlock-section section grimlock-author-avatars-section section_members_reveal" style="border-top-color:#eceeef;border-top-style:solid;border-top-width:0;border-bottom-color:#eceeef;border-bottom-style:solid;border-bottom-width:0;z-index:0;"  data-grimlock-animate-scroll-reveal="{&quot;origin&quot;:&quot;top&quot;,&quot;distance&quot;:0,&quot;selector&quot;:&quot;.section__header, .grimlock-author-avatars__user, .section__footer&quot;,&quot;duration&quot;:750,&quot;interval&quot;:50,&quot;delay&quot;:500,&quot;rotate&quot;:{&quot;x&quot;:0,&quot;y&quot;:0,&quot;z&quot;:0},&quot;opacity&quot;:0,&quot;scale&quot;:1,&quot;easing&quot;:&quot;cubic-bezier(0.6, 0.2, 0.1, 1)&quot;,&quot;viewFactor&quot;:0.5,&quot;mobile&quot;:false,&quot;reset&quot;:false}">
+			<div class="region__inner" style="padding-top:6%;padding-bottom:6%;background-color:#f6f6f6;">
+				<div class="region__container">
+					<div class="region__row">
+						<div class="region__col">
+								        <div class="grimlock-section__header section__header">
+
+            <h2 class="grimlock-section__title section__title grimlock-display-4 display-4" >
+				Our Active Members            </h2>
+				        </div><!-- .section__header -->
+			        <div class="section__content section__content--12-cols-left section__content--avatars-12-by-5-cols-classic">
+			<div class="shortcode-author-avatars"><ol class="grimlock-author-avatars__author-list bp-card-list bp-card-list--members author-list"><li class="grimlock-author-avatars__user bp-card-list__item bp-card-list--members__item has-post-thumbnail"><div class="card"><div class="ov-h"><a href="https://youzify.cera-theme.com/members/andre/" title="Andre Dubus"><span class="avatar"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="avatar user-24-avatar avatar-150 photo" width="150" height="150" alt="avatar for Andre Dubus" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/24/24-bpfull.jpg" /><noscript><img loading="lazy" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/24/24-bpfull.jpg" class="avatar user-24-avatar avatar-150 photo" width="150" height="150" alt="avatar for Andre Dubus" /></noscript></span><span class="name">Andre Dubus</span>		<div class="bp-member-xprofile-custom-fields">
+			<div class="bp-member-xprofile-custom-field bp-member-Birthdate">33</div><div class="bp-member-xprofile-custom-field bp-member-Position">Account manager</div><a class='bp-suggestions-mention' href='https://youzify.cera-theme.com/members/andre/' rel='nofollow'>@andre</a>		</div>
+		</a></div></div></li><li class="grimlock-author-avatars__user bp-card-list__item bp-card-list--members__item has-post-thumbnail"><div class="card"><div class="ov-h"><a href="https://youzify.cera-theme.com/members/antawnia/" title="Antawnia Jamison"><span class="avatar"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="avatar user-4-avatar avatar-150 photo" width="150" height="150" alt="avatar for Antawnia Jamison" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/4/4-bpfull.jpg" /><noscript><img loading="lazy" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/4/4-bpfull.jpg" class="avatar user-4-avatar avatar-150 photo" width="150" height="150" alt="avatar for Antawnia Jamison" /></noscript></span><span class="name">Antawnia Jamison</span>		<div class="bp-member-xprofile-custom-fields">
+			<div class="bp-member-xprofile-custom-field bp-member-Birthdate">43</div><div class="bp-member-xprofile-custom-field bp-member-Position">Business analyst</div><a class='bp-suggestions-mention' href='https://youzify.cera-theme.com/members/antawnia/' rel='nofollow'>@antawnia</a>		</div>
+		</a></div></div></li><li class="grimlock-author-avatars__user bp-card-list__item bp-card-list--members__item has-post-thumbnail"><div class="card"><div class="ov-h"><a href="https://youzify.cera-theme.com/members/samantha/" title="Cassey Dullea"><span class="avatar"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="avatar user-32-avatar avatar-150 photo" width="150" height="150" alt="avatar for Cassey Dullea" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/32/32-bpfull.jpg" /><noscript><img loading="lazy" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/32/32-bpfull.jpg" class="avatar user-32-avatar avatar-150 photo" width="150" height="150" alt="avatar for Cassey Dullea" /></noscript></span><span class="name">Cassey Dullea</span>		<div class="bp-member-xprofile-custom-fields">
+			<div class="bp-member-xprofile-custom-field bp-member-Birthdate">32</div><div class="bp-member-xprofile-custom-field bp-member-Position">Managing director</div><a class='bp-suggestions-mention' href='https://youzify.cera-theme.com/members/samantha/' rel='nofollow'>@samantha</a>		</div>
+		</a></div></div></li><li class="grimlock-author-avatars__user bp-card-list__item bp-card-list--members__item has-post-thumbnail"><div class="card"><div class="ov-h"><a href="https://youzify.cera-theme.com/members/cecelio/" title="Cecelio Cichan"><span class="avatar"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="avatar user-23-avatar avatar-150 photo" width="150" height="150" alt="avatar for Cecelio Cichan" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/23/23-bpfull.jpg" /><noscript><img loading="lazy" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/23/23-bpfull.jpg" class="avatar user-23-avatar avatar-150 photo" width="150" height="150" alt="avatar for Cecelio Cichan" /></noscript></span><span class="name">Cecelio Cichan</span>		<div class="bp-member-xprofile-custom-fields">
+			<div class="bp-member-xprofile-custom-field bp-member-Birthdate">61</div><div class="bp-member-xprofile-custom-field bp-member-Position">Chief brand officer</div><a class='bp-suggestions-mention' href='https://youzify.cera-theme.com/members/cecelio/' rel='nofollow'>@cecelio</a>		</div>
+		</a></div></div></li><li class="grimlock-author-avatars__user bp-card-list__item bp-card-list--members__item has-post-thumbnail"><div class="card"><div class="ov-h"><a href="https://youzify.cera-theme.com/members/chynna/" title="Chynna Phillips"><span class="avatar"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="avatar user-5-avatar avatar-150 photo" width="150" height="150" alt="avatar for Chynna Phillips" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/5/5-bpfull.jpg" /><noscript><img loading="lazy" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/5/5-bpfull.jpg" class="avatar user-5-avatar avatar-150 photo" width="150" height="150" alt="avatar for Chynna Phillips" /></noscript></span><span class="name">Chynna Phillips</span>		<div class="bp-member-xprofile-custom-fields">
+			<div class="bp-member-xprofile-custom-field bp-member-Birthdate">48</div><div class="bp-member-xprofile-custom-field bp-member-Position">Managing director</div><a class='bp-suggestions-mention' href='https://youzify.cera-theme.com/members/chynna/' rel='nofollow'>@chynna</a>		</div>
+		</a></div></div></li><li class="grimlock-author-avatars__user bp-card-list__item bp-card-list--members__item has-post-thumbnail"><div class="card"><div class="ov-h"><a href="https://youzify.cera-theme.com/members/dana/" title="Dana Cortese"><span class="avatar"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="avatar user-26-avatar avatar-150 photo" width="150" height="150" alt="avatar for Dana Cortese" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/26/26-bpfull.jpg" /><noscript><img loading="lazy" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/26/26-bpfull.jpg" class="avatar user-26-avatar avatar-150 photo" width="150" height="150" alt="avatar for Dana Cortese" /></noscript></span><span class="name">Dana Cortese</span>		<div class="bp-member-xprofile-custom-fields">
+			<div class="bp-member-xprofile-custom-field bp-member-Birthdate">27</div><div class="bp-member-xprofile-custom-field bp-member-Position">Founder CEO</div><a class='bp-suggestions-mention' href='https://youzify.cera-theme.com/members/dana/' rel='nofollow'>@dana</a>		</div>
+		</a></div></div></li><li class="grimlock-author-avatars__user bp-card-list__item bp-card-list--members__item has-post-thumbnail"><div class="card"><div class="ov-h"><a href="https://youzify.cera-theme.com/members/elena/" title="Elena Bulleati"><span class="avatar"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="avatar user-29-avatar avatar-150 photo" width="150" height="150" alt="avatar for Elena Bulleati" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/29/29-bpfull.jpg" /><noscript><img loading="lazy" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/29/29-bpfull.jpg" class="avatar user-29-avatar avatar-150 photo" width="150" height="150" alt="avatar for Elena Bulleati" /></noscript></span><span class="name">Elena Bulleati</span>		<div class="bp-member-xprofile-custom-fields">
+			<div class="bp-member-xprofile-custom-field bp-member-Birthdate">32</div><div class="bp-member-xprofile-custom-field bp-member-Position">Corporate development</div><a class='bp-suggestions-mention' href='https://youzify.cera-theme.com/members/elena/' rel='nofollow'>@elena</a>		</div>
+		</a></div></div></li><li class="grimlock-author-avatars__user bp-card-list__item bp-card-list--members__item has-post-thumbnail"><div class="card"><div class="ov-h"><a href="https://youzify.cera-theme.com/members/elia/" title="Elisio Street"><span class="avatar"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="avatar user-12-avatar avatar-150 photo" width="150" height="150" alt="avatar for Elisio Street" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/12/12-bpfull.jpg" /><noscript><img loading="lazy" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/12/12-bpfull.jpg" class="avatar user-12-avatar avatar-150 photo" width="150" height="150" alt="avatar for Elisio Street" /></noscript></span><span class="name">Elisio Street</span>		<div class="bp-member-xprofile-custom-fields">
+			<div class="bp-member-xprofile-custom-field bp-member-Birthdate">38</div><div class="bp-member-xprofile-custom-field bp-member-Position">Corporate development</div><a class='bp-suggestions-mention' href='https://youzify.cera-theme.com/members/elia/' rel='nofollow'>@elia</a>		</div>
+		</a></div></div></li><li class="grimlock-author-avatars__user bp-card-list__item bp-card-list--members__item has-post-thumbnail"><div class="card"><div class="ov-h"><a href="https://youzify.cera-theme.com/members/demo/" title="Jaime"><span class="avatar"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="avatar user-33-avatar avatar-150 photo" width="150" height="150" alt="avatar for Jaime" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/33/60abcadc1c647-bpfull.jpg" /><noscript><img loading="lazy" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/33/60abcadc1c647-bpfull.jpg" class="avatar user-33-avatar avatar-150 photo" width="150" height="150" alt="avatar for Jaime" /></noscript></span><span class="name">Jaime</span>		<div class="bp-member-xprofile-custom-fields">
+			<div class="bp-member-xprofile-custom-field bp-member-Birthdate">19</div><div class="bp-member-xprofile-custom-field bp-member-Position">Corporate development</div><a class='bp-suggestions-mention' href='https://youzify.cera-theme.com/members/james/' rel='nofollow'>@james</a>		</div>
+		</a></div></div></li><li class="grimlock-author-avatars__user bp-card-list__item bp-card-list--members__item has-post-thumbnail"><div class="card"><div class="ov-h"><a href="https://youzify.cera-theme.com/members/james/" title="James Washington"><span class="avatar"><img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="avatar user-7-avatar avatar-150 photo" width="150" height="150" alt="avatar for James Washington" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/7/7-bpfull.jpg" /><noscript><img loading="lazy" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/avatars/7/7-bpfull.jpg" class="avatar user-7-avatar avatar-150 photo" width="150" height="150" alt="avatar for James Washington" /></noscript></span><span class="name">James Washington</span>		<div class="bp-member-xprofile-custom-fields">
+			<div class="bp-member-xprofile-custom-field bp-member-Birthdate">19</div><div class="bp-member-xprofile-custom-field bp-member-Position">Corporate development</div><a class='bp-suggestions-mention' href='https://youzify.cera-theme.com/members/james/' rel='nofollow'>@james</a>		</div>
+		</a></div></div></li></ol></div></div><!-- .section__content -->
+			        <div class="grimlock-section__footer section__footer">
+
+            <a href="/members" class="grimlock-section__btn grimlock-section__btn--1 section__btn btn grimlock-btn-link btn-link" >
+	            View all our members            </a>
+				            	        </div><!-- .section__footer -->
+									</div><!-- .region__col -->
+					</div><!-- .region__row -->
+				</div><!-- .region__container -->
+			</div><!-- .region__inner -->
+			</div><!-- .grimlock-section -->
+
+
+			<div data-bg="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/12/omar-lopez-rwF_pJRWhAI-unsplash-1850x550.jpg"  class="wp-block-grimlock-section grimlock-section--btn-primary grimlock-section--intranet-extranet-become-simple alignfull region grimlock-region grimlock-region--mt-0 grimlock-region--mb-0 grimlock-region--pt-10 grimlock-region--pb-10 grimlock-region--6-6-cols-left region--6-6-cols-left grimlock-region--container-classic region--container-classic grimlock-section section section_content_reveal rocket-lazyload" style="background-repeat:no-repeat;background-position:center;background-size:cover;-webkit-background-size:cover;background-attachment:scroll;border-top-color:#eceeef;border-top-style:solid;border-top-width:0;border-bottom-color:#eceeef;border-bottom-style:solid;border-bottom-width:0;z-index:0;color:rgba(255, 255, 255, 0.9);"  >
+			<div class="region__inner" style="padding-top:10%;padding-bottom:10%;background-color:rgba(37, 37, 56, 0.3);">
+				<div class="region__container">
+					<div class="region__row">
+						<div class="region__col region__col--1" >
+							<div class="grimlock-reveal-element grimlock-reveal-element--thumbnail" >
+															</div>
+						</div><!-- .region__col -->
+						<div class="region__col region__col--2" >
+							<div class="grimlock-reveal-element grimlock-reveal-element--content" data-grimlock-animate-scroll-reveal="{&quot;origin&quot;:&quot;right&quot;,&quot;distance&quot;:&quot;80px&quot;,&quot;duration&quot;:750,&quot;delay&quot;:0,&quot;rotate&quot;:{&quot;x&quot;:0,&quot;y&quot;:0,&quot;z&quot;:0},&quot;opacity&quot;:0,&quot;scale&quot;:1,&quot;easing&quot;:&quot;cubic-bezier(0.6, 0.2, 0.1, 1)&quot;,&quot;viewFactor&quot;:0.5,&quot;mobile&quot;:false,&quot;reset&quot;:false}">
+									        <div class="grimlock-section__header section__header">
+
+            <h2 class="grimlock-section__title section__title grimlock-display-1 display-1" style="color:#ffffff;">
+				AITU Social Network<br />Become <ins>Simple</ins>            </h2>
+				        </div><!-- .section__header -->
+				        <div class="grimlock-section__content section__content">
+				            <div class="grimlock-section__text section__text">
+				<p>Share, get more attention, new relationships make yourself popular! Use all features of our social network platform!</p>
+            </div>
+				        </div><!-- .section__content -->
+				        <div class="grimlock-section__footer section__footer">
+
+            <a href="/register" class="grimlock-section__btn grimlock-section__btn--1 section__btn btn grimlock-btn-primary btn-primary" >
+	            Discover more            </a>
+				            	        </div><!-- .section__footer -->
+										</div>
+						</div><!-- .region__col -->
+					</div><!-- .region__row -->
+				</div><!-- .region__container -->
+			</div><!-- .region__inner -->
+			</div><!-- .grimlock-section -->
+
+
+
+
+
+            <div  class=" wp-block-grimlock-nav-menu-section grimlock-nav-menu-section--btn-primary grimlock-nav-menu-section--why-build-a-community-platform alignfull region grimlock-region grimlock-region--mt-0 grimlock-region--mb-0 grimlock-region--pt-6 grimlock-region--pb-6 grimlock-region--12-cols-center region--12-cols-center grimlock-region--container-classic region--container-classic grimlock-section section grimlock-nav-menu-section section_menu_items_reveal" style="border-top-color:#eceeef;border-top-style:solid;border-top-width:0;border-bottom-color:#eceeef;border-bottom-style:solid;border-bottom-width:0;z-index:0;"  data-grimlock-animate-scroll-reveal="{&quot;origin&quot;:&quot;top&quot;,&quot;distance&quot;:0,&quot;selector&quot;:&quot;.section__header, .menu-item, .section__footer&quot;,&quot;duration&quot;:750,&quot;interval&quot;:50,&quot;delay&quot;:500,&quot;rotate&quot;:{&quot;x&quot;:0,&quot;y&quot;:0,&quot;z&quot;:0},&quot;opacity&quot;:0,&quot;scale&quot;:1,&quot;easing&quot;:&quot;cubic-bezier(0.6, 0.2, 0.1, 1)&quot;,&quot;viewFactor&quot;:0.5,&quot;mobile&quot;:false,&quot;reset&quot;:false}">
+            <div class="grimlock-region__inner region__inner" style="padding-top:6%;padding-bottom:6%;background-color:#f6f6f6;">
+                <div class="grimlock-region__container region__container">
+                    <div class="grimlock-region__row region__row">
+                        <div class="grimlock-region__col grimlock-region__col--1 region__col region__col--1">
+							                        </div><!-- .region__col -->
+                        <div class="grimlock-region__col grimlock-region__col--2 region__col region__col--2">
+								        <div class="grimlock-section__header section__header">
+
+            <h2 class="grimlock-section__title section__title grimlock-display-3 display-3" >
+				Benefits of our social network            </h2>
+			            <h3 class="grimlock-section__subtitle section__subtitle grimlock-lead lead" >
+				3 simple reasons            </h3>
+				        </div><!-- .section__header -->
+			        <div class="grimlock-section__content section__content">
+            <div class="grimlock-section__nav-menu section__nav-menu">
+		        <ul id="menu-features" class="menu"><li id="menu-item-1568" class="info menu-item menu-item-type-custom menu-item-object-custom menu-item-1568"><a href="#"><span class="icon-wrapper"><i class="cera-icon cera-users"></i><span class="h5">Bring users together</span></span><div class="menu-item-description">Get new friends and share media with them. Gather more followers make yourself star!</div></a></li>
+<li id="menu-item-1578" class="warning menu-item menu-item-type-custom menu-item-object-custom menu-item-1578"><a href="#"><span class="icon-wrapper"><i class="cera-icon cera-hard-drive"></i><span class="h5">Share posts</span></span><div class="menu-item-description">Share with your current emotions with media. Get more likes and comments on your posts. Feel this authmosphere. </div></a></li>
+<li id="menu-item-1579" class="success menu-item menu-item-type-custom menu-item-object-custom menu-item-1579"><a href="#"><span class="icon-wrapper"><i class="cera-icon cera-message-circle"></i><span class="h5">Create relationships</span></span><div class="menu-item-description">Socialize with everyone on our platform. Grow count of your friends and have a nice time.</div></a></li>
+</ul>            </div><!-- .section__nav-menu -->
+        </div><!-- .section__content -->
+		                        </div><!-- .region__col -->
+                    </div><!-- .region__row -->
+                </div><!-- .region__container -->
+            </div><!-- .region__inner -->
+            </div><!-- .grimlock-section -->
+			</div><!-- .entry-content -->
+					</article><!-- #post-## -->
+
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+							</div><!-- .region__row -->
+			</div><!-- .region__container -->
+		</div><!-- #content -->
+
+					<div id="after_content" class="after_content site-after-content d-print-none">			<div class="widget-area">
+								<section id="grimlock_section_widget-2" class="widget widget_grimlock_section">			<div  class=" grimlock-section--btn-secondary grimlock-section--we-are-all-close-together region grimlock-region grimlock-region--mt-0 grimlock-region--mb-0 grimlock-region--pt-8 grimlock-region--pb-8 grimlock-region--12-cols-center region--12-cols-center grimlock-region--container-classic region--container-classic grimlock-section section section_content_reveal" style="border-top-color:#eceeef;border-top-style:solid;border-top-width:1px;border-bottom-color:#eceeef;border-bottom-style:solid;border-bottom-width:0;"  >
+			<div class="region__inner" style="padding-top:8.5%;padding-bottom:8.5%;background-color:#ffffff;">
+				<div class="region__container">
+					<div class="region__row">
+						<div class="region__col region__col--1" >
+							<div class="grimlock-reveal-element grimlock-reveal-element--thumbnail" >
+															</div>
+						</div><!-- .region__col -->
+						<div class="region__col region__col--2" >
+							<div class="grimlock-reveal-element grimlock-reveal-element--content" data-grimlock-animate-scroll-reveal="{&quot;origin&quot;:&quot;bottom&quot;,&quot;distance&quot;:&quot;80px&quot;,&quot;duration&quot;:750,&quot;delay&quot;:0,&quot;rotate&quot;:{&quot;x&quot;:0,&quot;y&quot;:0,&quot;z&quot;:0},&quot;opacity&quot;:0,&quot;scale&quot;:1,&quot;easing&quot;:&quot;cubic-bezier(0.6, 0.2, 0.1, 1)&quot;,&quot;viewFactor&quot;:0.5,&quot;mobile&quot;:false,&quot;reset&quot;:false}">
+									        <div class="grimlock-section__header section__header">
+
+            <h2 class="grimlock-section__title section__title grimlock-display-2 display-2" >
+				<span class="widget-title">We are all close together</span>            </h2>
+				        </div><!-- .section__header -->
+				        <div class="grimlock-section__content section__content">
+				            <div class="grimlock-section__text section__text">
+				<p>A problem, a question, an emergency? <br />Do not hesitate to visit the help centre, <em>we can help you</em>.</p>
+            </div>
+				        </div><!-- .section__content -->
+				        <div class="grimlock-section__footer section__footer">
+
+            <a href="#" class="grimlock-section__btn grimlock-section__btn--1 section__btn btn grimlock-btn-secondary btn-secondary" >
+	            <i class="cera-icon cera-life-buoy"></i> Help center </a>
+				            	        </div><!-- .section__footer -->
+										</div>
+						</div><!-- .region__col -->
+					</div><!-- .region__row -->
+				</div><!-- .region__container -->
+			</div><!-- .region__inner -->
+			</div><!-- .grimlock-section -->
+		</section>			</div><!-- .widget-area -->
+			</div>
+					<div id="prefooter" class="grimlock-prefooter site-prefooter d-print-none region grimlock-region grimlock-region--mt-0 grimlock-region--mb-0 grimlock-region--pt-5 grimlock-region--pb-5 grimlock-region--3-3-3-3-cols-left region--3-3-3-3-cols-left grimlock-region--container-classic region--container-classic" style="border-top-color:#E9EFF3;border-top-style:solid;border-top-width:1px;border-bottom-color:#E9EFF3;border-bottom-style:solid;border-bottom-width:0;color:#f5cbd3;"  >
+			<div class="grimlock-region__inner region__inner" style="padding-top:5%;padding-bottom:5%;background-color:#ea3d56;">
+				<div class="grimlock-region__container region__container">
+							<div class="region__row">
+								<div class="region__col region__col--1 widget-area">
+						<section id="media_image-3" class="widget widget_media_image"><a href="#"><img width="142" height="44" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20142%2044'%3E%3C/svg%3E" class="image wp-image-45  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/10/logo.png" /><noscript><img width="142" height="44" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/10/logo.png" class="image wp-image-45  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" /></noscript></a></section><section id="text-4" class="widget widget_text">			<div class="textwidget"><p>Welcome to AITU, the modern social <br />network platform.</p>
+</div>
+		</section>					</div><!-- .region__col -->
+										<div class="region__col region__col--2 widget-area">
+						<section id="nav_menu-4" class="widget widget_nav_menu"><span class="widget-title">AITU Community</span><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-1752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1752"><a href="https://youzify.cera-theme.com/dashboard/">Dashboard</a></li>
+<li id="menu-item-1787" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1787"><a href="/members/">Members</a></li>
+<li id="menu-item-1751" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1751"><a href="https://youzify.cera-theme.com/news/">Latest news</a></li>
+</ul></div></section>					</div><!-- .region__col -->
+										<div class="region__col region__col--3 widget-area">
+						<section id="nav_menu-5" class="widget widget_nav_menu"><span class="widget-title">Memberships</span><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-1757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1757"><a href="https://youzify.cera-theme.com/membership-account/membership-levels/">Membership plans</a></li>
+<li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1755"><a href="https://youzify.cera-theme.com/restricted-content/">Restricted content</a></li>
+<li id="menu-item-1774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1774"><a href="https://youzify.cera-theme.com/groups/">Groups</a></li>
+</ul></div></section>					</div><!-- .region__col -->
+										<div class="region__col region__col--4 widget-area">
+						<section id="nav_menu-6" class="widget widget_nav_menu"><span class="widget-title">More tools</span><div class="menu-footer-3-container"><ul id="menu-footer-3" class="menu"><li id="menu-item-1772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1772"><a href="https://youzify.cera-theme.com/swipe-members/">Swipe Members</a></li>
+<li id="menu-item-1773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1773"><a href="https://youzify.cera-theme.com/search-members/">Search members</a></li>
+<li id="menu-item-1758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1758"><a href="https://youzify.cera-theme.com/login/">Login</a></li>
+</ul></div></section>					</div><!-- .region__col -->
+							</div><!-- .region__row -->
+						</div><!-- .region__container -->
+			</div><!-- .region__inner -->
+			</div><!-- .grimlock-region -->
+					<footer id="footer" class="grimlock-footer site-footer d-print-none region grimlock-region grimlock-region--mt-0 grimlock-region--mb-0 grimlock-region--pt-1 grimlock-region--pb-1 grimlock-region--6-6-cols-left-right region--6-6-cols-left-right grimlock-region--container-classic region--container-classic" style="border-top-color:#eb6579;border-top-style:solid;border-top-width:1px;border-bottom-color:rgba(255,255,255,0);border-bottom-style:solid;border-bottom-width:0;color:#edb0b5;"  >
+			<div class="grimlock-region__inner region__inner" style="padding-top:1.5%;padding-bottom:1.5%;background-color:#ea3d56;">
+				<div class="grimlock-region__container region__container">
+							<div class="region__row">
+								<div class="region__col region__col--1 widget-area">
+						<section id="text-2" class="widget widget_text">			<div class="textwidget"><p>Copyright © 2019 <a href="#">AITU</a>. All rights reserved</p>
+</div>
+		</section>					</div><!-- .region__col -->
+										<div class="region__col region__col--2 widget-area">
+						<section id="nav_menu-2" class="widget widget_nav_menu"><div class="menu-social-container"><ul id="menu-social" class="menu"><li id="menu-item-112" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-112"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+<li id="menu-item-111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+<li id="menu-item-113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+</ul></div></section>					</div><!-- .region__col -->
+							</div><!-- .region__row -->
+						</div><!-- .region__container -->
+			</div><!-- .region__inner -->
+			</footer><!-- .grimlock-region -->
+
+		</div><!-- #site -->
+
+
+	</div><!-- #site-wrapper -->
+
+
+		<div class="modal fade" id="grimlock-login-form-modal" tabindex="-1" role="dialog" aria-labelledby="grimlock-login-form-modal-title" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header p-0 m-0">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="youzify-membership-login-shortcode">
+		<div class="youzify-membership-form youzify-membership-login-page form-with-header form-with-labels form-no-icons form-full-border form-border-flat">
+
+
+    	<header class="youzify-membership-form-header">
+	    		    		<div data-bg="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/public/assets/images/geopattern.png" class="youzify-membership-form-cover youzify-membership-default-cover rocket-lazyload" style="">
+			        <h2 class="form-cover-title">Login</h2>
+	    		</div>
+	    	    	</header>
+
+
+
+
+
+
+			<form id="youzify-membership-form" class="youzify-membership-login-form" method="post" action="https://youzify.cera-theme.com/wp-login.php?wpe-login=true">
+
+				<!-- After Form Buttons -->
+
+								<div class="youzify-membership-form-item">
+		    		<div class="youzify-membership-item-content">
+			           				           		<label for="user_login">Username or Email</label>
+			        				           <div class="youzify-membership-field-content">
+		           							    		<input type="text" name="log" autocomplete="false" placeholder="" value="" required>
+			            </div>
+		        	</div>
+		       	</div>
+							<div class="youzify-membership-form-item">
+		    		<div class="youzify-membership-item-content">
+			           				           		<label for="user_pass">Password</label>
+			        				           <div class="youzify-membership-field-content">
+		           							    		<input type="password" name="pwd" autocomplete="false" placeholder="" value="" required>
+			            </div>
+		        	</div>
+		       	</div>
+					    	<div class="youzify-membership-form-item youzify-membership-remember-me">
+		    		<div class="youzify-membership-item-content">
+			        	<label class="youzify_membership_checkbox_field" ><input name="rememberme" type="checkbox" value="forever"><div class="youzify_membership_field_indication"></div>Remember Me</label>
+
+		        	</div>
+					<a class="youzify-membership-forgot-password" href="https://youzify.cera-theme.com/lost-password/">Lost password?</a>		        </div>
+							<div class="youzify-membership-form-actions form-fullwidth-button form-border-radius">				<div class="youzify-membership-action-item youzify-membership-submit-item">
+					<div class="youzify-membership-item-inner">
+	           			<button type="submit" value="submit"  name="signin_submit"  >
+	            				           				<span class="youzify-membership-button-title">Log In</span>
+	           			</button>
+	            	</div>
+	            </div>
+										</div>
+				<!-- After Form Buttons -->
+
+				<input type="hidden" name="youzify-membership-form" value="1">
+
+			</form>
+
+		</div>
+
+		</div>					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="grimlock-login-form-modal" tabindex="-1" role="dialog" aria-labelledby="grimlock-login-form-modal-title" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+
+						<h5 class="modal-title" id="grimlock-login-form-modal-title">
+															<img width="142" height="44" class="grimlock-login-form-modal-logo" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20142%2044'%3E%3C/svg%3E" alt="Login Form Logo" data-lazy-src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/10/logo.png" /><noscript><img width="142" height="44" class="grimlock-login-form-modal-logo" src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/uploads/sites/8/2019/10/logo.png" alt="Login Form Logo" /></noscript>
+													</h5>
+
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+
+					</div>
+					<div class="modal-body">
+
+		<form name="loginform" id="loginform" action="https://youzify.cera-theme.com/wp-login.php?wpe-login=true" method="post">
+			<div class="alert alert-primary"><div>Username : <strong>demo</strong></div><div>Password : <strong>demo_CERA%themeforest</strong></div></div>
+			<p class="login-username">
+				<label for="user_login">Username or Email Address</label>
+				<input type="text" name="log" id="user_login" class="input" value="" size="20" />
+			</p>
+			<p class="login-password">
+				<label for="user_pass">Password</label>
+				<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" />
+			</p>
+
+			<p class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label></p>
+			<p class="login-submit">
+				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Log In" />
+				<input type="hidden" name="redirect_to" value="https://youzify.cera-theme.com/" />
+			</p>
+
+		<div class="login-footer">
+			<div class="login-lostpassword"><a href="https://cera-theme.com/wp-login.php?action=lostpassword&#038;wpe-login=1">Lost your password?</a></div>		</div>
+
+
+		</form>					</div>
+				</div>
+			</div>
+		</div>
+
+			<!-- Memberships powered by Paid Memberships Pro v2.5.9.
+ -->
+	<link data-minify="1" rel='stylesheet' id='author-avatars-shortcode-css'  href='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/author-avatars/css/shortcode.css?ver=1620821251' type='text/css' media='all' />
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='wp-polyfill-js-after'>
+( 'fetch' in window ) || document.write( '<script src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0" defer></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0" defer></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0" defer></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4" defer></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12" defer></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2" defer></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4" defer></scr' + 'ipt>' );
+</script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/hooks.min.js?ver=50e23bed88bcb9e6e14023e9961698c1' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/i18n.min.js?ver=db9a9a37da262883343e941c3731bc67' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript' id='youzify-js-extra'>
+/* <![CDATA[ */
+var Youzify = {"unknown_error":"An unknown error occurred. Please try again later.","slideshow_auto":"1","slides_height_type":"fixed","activity_autoloader":"on","authenticating":"Authenticating...","security_nonce":"da213e7aaf","displayed_user_id":"0","ajax_url":"https:\/\/youzify.cera-theme.com\/wp-admin\/admin-ajax.php","save_changes":"Save Changes","thanks":"OK! Thanks","confirm":"Confirm","cancel":"Cancel","menu_title":"Menu","gotit":"Got it!","done":"Done!","ops":"Oops!","slideshow_speed":"5","assets":"https:\/\/youzify.cera-theme.com\/wp-content\/plugins\/youzify\/includes\/public\/assets\/","youzify_url":"https:\/\/youzify.cera-theme.com\/wp-content\/plugins\/youzify\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/youzify/includes/public/assets/js/youzify.min.js?ver=1.0.5' id='youzify-js' defer></script>
+<script type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type='text/javascript' id='rocket-delay-js-js-after'>
+(function() {
+"use strict";var e=function(){function n(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(e,t,r){return t&&n(e.prototype,t),r&&n(e,r),e}}();function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function r(e,t){n(this,r),this.attrName="data-rocketlazyloadscript",this.browser=t,this.options=this.browser.options,this.triggerEvents=e,this.userEventListener=this.triggerListener.bind(this)}return e(r,[{key:"init",value:function(){this._addEventListener(this)}},{key:"reset",value:function(){this._removeEventListener(this)}},{key:"_addEventListener",value:function(t){this.triggerEvents.forEach(function(e){return window.addEventListener(e,t.userEventListener,t.options)})}},{key:"_removeEventListener",value:function(t){this.triggerEvents.forEach(function(e){return window.removeEventListener(e,t.userEventListener,t.options)})}},{key:"_loadScriptSrc",value:function(){var r=this,e=document.querySelectorAll("script["+this.attrName+"]");0!==e.length&&Array.prototype.slice.call(e).forEach(function(e){var t=e.getAttribute(r.attrName);e.setAttribute("src",t),e.removeAttribute(r.attrName)}),this.reset()}},{key:"triggerListener",value:function(){this._loadScriptSrc(),this._removeEventListener(this)}}],[{key:"run",value:function(){RocketBrowserCompatibilityChecker&&new r(["keydown","mouseover","touchmove","touchstart","wheel"],new RocketBrowserCompatibilityChecker({passive:!0})).init()}}]),r}();t.run();
+}());
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/login|\/login\/|\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/youzify.cera-theme.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script data-minify="1" type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock/assets/js/navigation-stick-to-top.js?ver=1620821251' id='grimlock-navigation-stick-to-top-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/grimlock-animate/assets/js/vendor/jquery.parallax.min.js?ver=2.0.0-alpha' id='parallax.js-js' defer></script>
+<script data-minify="1" type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-animate/assets/js/vendor/scrollreveal.js?ver=1620821251' id='scrollreveal-js' defer></script>
+<script data-minify="1" type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-animate/assets/js/main.js?ver=1620821251' id='grimlock-animate-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/effect.min.js?ver=1.12.1' id='jquery-effects-core-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/effect-drop.min.js?ver=1.12.1' id='jquery-effects-drop-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/grimlock-buddypress/assets/js/vendor/hammer.min.js?ver=2.0.7' id='hammerjs-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/grimlock-buddypress/assets/js/vendor/priority-nav.min.js?ver=1.0.12' id='priority-nav-js' defer></script>
+<script type='text/javascript' id='grimlock-buddypress-js-extra'>
+/* <![CDATA[ */
+var grimlock_buddypress = {"priority_nav_dropdown_label":"More","priority_nav_dropdown_breakpoint_label":"Menu","ajax_url":"https:\/\/youzify.cera-theme.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script data-minify="1" type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/grimlock-buddypress/assets/js/main.js?ver=1620821251' id='grimlock-buddypress-js' defer></script>
+<script data-minify="1" type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/cache/min/8/wp-content/plugins/coblocks/dist/js/coblocks-animation.js?ver=1620821251' id='coblocks-animation-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/themes/cera/assets/js/skip-link-focus-fix.min.js?ver=20130115' id='cera-skip-link-focus-fix-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/themes/cera/assets/js/vendor/popper.min.js?ver=1.14.3' id='popper-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/themes/cera/assets/js/vendor/bootstrap.min.js?ver=4.1.3' id='bootstrap-js' defer></script>
+<script type='text/javascript' id='cera-js-extra'>
+/* <![CDATA[ */
+var cera = {"priority_nav_dropdown_label":"More","priority_nav_dropdown_breakpoint_label_menu":"Menu","priority_nav_dropdown_breakpoint_label_categories":"Categories","priority_nav_dropdown_breakpoint_label_tags":"Tags","priority_nav_dropdown_breakpoint_label_formats":"Formats"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/themes/cera/assets/js/main.min.js?ver=1.1.5' id='cera-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/masonry.min.js?ver=4.2.2' id='masonry-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b' id='jquery-masonry-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.12.1' id='jquery-ui-menu-js' defer></script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/dom-ready.min.js?ver=eb19f7980f0268577acb5c2da5457de3' id='wp-dom-ready-js' defer></script>
+<script type='text/javascript' id='wp-a11y-js-translations'>
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", { "locale_data": { "messages": { "": {} } } } );
+</script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/dist/a11y.min.js?ver=5e00de7a43b31bbb9eaf685f089a3903' id='wp-a11y-js' defer></script>
+<script type='text/javascript' id='jquery-ui-autocomplete-js-extra'>
+/* <![CDATA[ */
+var uiAutocompleteL10n = {"noResults":"No results found.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate.","itemSelected":"Item selected."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.12.1' id='jquery-ui-autocomplete-js' defer></script>
+<script type='text/javascript' id='buddypress-global-search-js-extra'>
+/* <![CDATA[ */
+var BBOSS_GLOBAL_SEARCH = {"nonce":"5369a05d44","action":"bboss_global_search_ajax","debug":"1","ajaxurl":"https:\/\/youzify.cera-theme.com\/wp-admin\/admin-ajax.php","loading_msg":"Loading Suggestions","enable_ajax_search":"yes","per_page":"5"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/buddypress-global-search/assets/js/buddypress-global-search.min.js?ver=1.2.1' id='buddypress-global-search-js' defer></script>
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://3wqs8fylqej40grcv31kcqxj-wpengine.netdna-ssl.com/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img loading="lazy" data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<div class="play"></div>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.dataset.query.length?'':'&'+this.dataset.query;e.setAttribute("src",t.replace("ID",this.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.replaceChild(e,this)}document.addEventListener("DOMContentLoaded",function(){var e,t,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),e.onclick=lazyLoadYoutubeIframe,a[t].appendChild(e)});</script>
+</body>
+</html>
+<!-- Rocket no webp -->
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
