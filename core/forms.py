@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django import forms
-from .models import Profile,Post,Comment
+from .models import Profile,Post,Comment,Message
 
 class UserForm(forms.ModelForm):
 	password = forms.CharField(widget=forms.PasswordInput)
@@ -29,6 +29,13 @@ class CreatePost(forms.ModelForm):
 	class Meta:
 		model = Post
 		fields = ['post_text','post_picture']
+
+
+class CreateMessage(forms.ModelForm):
+	class Meta:
+		model = Message
+		fields = ['message']
+
 
 class CreateComment(forms.ModelForm):
 	
