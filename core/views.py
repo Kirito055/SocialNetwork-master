@@ -68,7 +68,9 @@ def profile(request, username):
         context.update({'comment_form': comment_form})
 
     return render(request, 'core/profile.html', context)
+def Chat(requset,username):
 
+    return render(request, 'core/chat.html', context)
 class UserFormView(View):
     form_class = UserForm
     template_name = 'core/registration_form.html'
