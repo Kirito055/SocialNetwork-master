@@ -68,7 +68,7 @@ def profile(request, username):
         context.update({'comment_form': comment_form})
 
     return render(request, 'core/profile.html', context)
-def Chat(requset,chat_id,username):
+def chat(request,chat_id,username):
     if request.method == 'POST':
 
         message_form = CreateMessage(request.POST)
@@ -80,7 +80,7 @@ def Chat(requset,chat_id,username):
 
             messages.success(request, f'Your Comment has been posted')
 
-    url = reverse('chat', kwargs={'chat_id': chat_id})
+    url = reverse('chat', kwargs={'username': username})
     return redirect(url)
 class UserFormView(View):
     form_class = UserForm
