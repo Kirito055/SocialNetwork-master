@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile,Following,Follower,Post,Comment,Message
+from .models import Profile,Following,Follower,Post,Comment,Message,Chat
 
 class ProfileRegister(admin.ModelAdmin):
     fields = ('user', 'profile_photo', 'status_info')
@@ -13,6 +13,6 @@ admin.site.register(Follower)
 admin.site.register(Following)
 admin.site.register(Post)
 admin.site.register(Comment)
-
+admin.site.register(Chat)
 admin.site.register(Message)
 

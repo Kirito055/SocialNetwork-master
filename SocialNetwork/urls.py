@@ -24,7 +24,7 @@ urlpatterns = [
      url(r'^commentweb/(?P<username>\w+)/(?P<post_id>\d+)/$', user_views.commentweb,name = "commentweb"),
      url(r'^rate_post/(?P<username>\w+)/(?P<id>\d+)/$', user_views.rate_post, name="rate_post"),
      path('feed/',user_views.feed,name="feed"),
-    url(r'^chat/(?P<username>\w+)/$', user_views.chat, name='chat'),
+    url(r'^chat/(?P<chat_id>\w+)/$', user_views.chat, name='chat'),
 ]
 
 if settings.DEBUG:

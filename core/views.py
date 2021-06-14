@@ -2,13 +2,13 @@ from django.shortcuts import render, redirect
 from django.views import generic
 from django.views.generic import View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .forms import UserForm, UpdateUserForm, UpdateProfileForm, CreatePost, CreateComment
+from .forms import UserForm, UpdateUserForm, UpdateProfileForm, CreatePost, CreateComment,CreateMessage
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
-from .models import User, Following, Follower, Post
+from .models import User, Following, Follower, Post,Message,Chat
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 
@@ -68,9 +68,20 @@ def profile(request, username):
         context.update({'comment_form': comment_form})
 
     return render(request, 'core/profile.html', context)
-def Chat(requset,username):
+def Chat(requset,chat_id,username):
+    if request.method == 'POST':
 
-    return render(request, 'core/chat.html', context)
+        message_form = CreateMessage(request.POST)
+        if message_form.is_valid():
+            message_text = message_form.cleaned_data['message_text']
+            user = User.objects.get(username=username)
+            chat = user.chat_set.get(pk=chat_id)
+            chat.message_set.create(user=request.user, message_text=message_text)
+
+            messages.success(request, f'Your Comment has been posted')
+
+    url = reverse('chat', kwargs={'chat_id': chat_id})
+    return redirect(url)
 class UserFormView(View):
     form_class = UserForm
     template_name = 'core/registration_form.html'
