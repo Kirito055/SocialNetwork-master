@@ -16,9 +16,11 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     post_text = models.CharField(max_length=2000)
     post_picture = models.FileField(default="default.jpg", upload_to='post_picture')
-    rating=models.FloatField(default=0.0)
+    rating = models.FloatField(default=0.0)
+
     def get_rating(self):
         return self.rating
+
 
 class Following(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
@@ -34,14 +36,25 @@ class Follower(models.Model):
 
     # def __str__(self):
     #     return self.follower_user.username
+
+
+class Chatuser(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    chating_user = models.CharField(max_length=100, null=True)
+
+
 class Chat(models.Model):
-    user=models.ForeignKey(User,on_delete=models.CASCADE, null=True)
-    typing_user = models.CharField(max_length=100, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    usertwo = models.ForeignKey(Chatuser, on_delete=models.CASCADE, null=True)
+
+
+class Message(models.Model):
+    chat = models.ForeignKey(Chat, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    message = models.CharField(max_length=1000)
+
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     comment_text = models.CharField(default="Enter Comment Here", max_length=2000)
-class Message(models.Model):
-    chat=models.ForeignKey(Chat,on_delete=models.CASCADE, null=True)
-    user=models.ForeignKey(User,on_delete=models.CASCADE,null=True)
-    message=models.CharField(max_length=1000)

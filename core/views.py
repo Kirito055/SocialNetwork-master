@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import generic
 from django.views.generic import View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .forms import UserForm, UpdateUserForm, UpdateProfileForm, CreatePost, CreateComment,CreateMessage
+from .forms import UserForm, UpdateUserForm, UpdateProfileForm, CreatePost, CreateComment,CreateMessage,CreateChat
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
@@ -68,16 +68,30 @@ def profile(request, username):
         context.update({'comment_form': comment_form})
 
     return render(request, 'core/profile.html', context)
-def chat(request,chat_id,username):
+def commentweb(request, post_id, username):
     if request.method == 'POST':
 
+        comment_form = CreateComment(request.POST)
+        if comment_form.is_valid():
+            comment_text = comment_form.cleaned_data['comment_text']
+            user = User.objects.get(username=username)
+            post = user.post_set.get(pk=post_id)
+            post.comment_set.create(user=request.user, comment_text=comment_text)
+
+            messages.success(request, f'Your Comment has been posted')
+
+    url = reverse('profile', kwargs={'username': username})
+    return redirect(url)
+
+
+def chat(request,chat_id,username):
+    if request.method == 'POST':
         message_form = CreateMessage(request.POST)
         if message_form.is_valid():
             message_text = message_form.cleaned_data['message_text']
             user = User.objects.get(username=username)
             chat = user.chat_set.get(pk=chat_id)
             chat.message_set.create(user=request.user, message_text=message_text)
-
             messages.success(request, f'Your Comment has been posted')
 
     url = reverse('chat', kwargs={'username': username})
@@ -120,6 +134,15 @@ def followweb(request, username):
             disciple.following_set.create(following_user=leader)
             url = reverse('profile', kwargs={'username': username})
             return redirect(url)
+def chatweb(request,username):
+    if request.method=='POST':
+        disciple=User.objects.get(username=request.user.username)
+        leader = User.objects.get(username=username)
+        leader.chat_set.create(user=disciple)
+        disciple.chat_set.create(usertwo=leader)
+        url = reverse('chat', kwargs={'username': username})
+        return redirect(url)
+
 def rate_post(request,id,username):
     if request.method == 'POST':
             postobj = Post.objects.get(pk=id)
@@ -128,21 +151,6 @@ def rate_post(request,id,username):
             postobj.save()
     url = reverse('profile', kwargs={'username': username})
     return redirect(url)
-def commentweb(request, post_id, username):
-    if request.method == 'POST':
-
-        comment_form = CreateComment(request.POST)
-        if comment_form.is_valid():
-            comment_text = comment_form.cleaned_data['comment_text']
-            user = User.objects.get(username=username)
-            post = user.post_set.get(pk=post_id)
-            post.comment_set.create(user=request.user, comment_text=comment_text)
-
-            messages.success(request, f'Your Comment has been posted')
-
-    url = reverse('profile', kwargs={'username': username})
-    return redirect(url)
-
 
 def unfollowweb(request, username):
     if request.method == 'POST':
@@ -172,7 +180,6 @@ def postweb(request, username):
 
     url = reverse('profile', kwargs={'username': username})
     return redirect(url)
-
 
 
 def feed(request):

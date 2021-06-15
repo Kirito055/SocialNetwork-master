@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django import forms
-from .models import Profile,Post,Comment,Message
+from .models import Profile,Post,Comment,Message,Chat
 
 class UserForm(forms.ModelForm):
 	password = forms.CharField(widget=forms.PasswordInput)
